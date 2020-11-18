@@ -2,6 +2,8 @@
 $(".button2").click(function() {
     $(".container").show();
     $(".back-button").show();
+    var query = document.getElementById("states").value;
+    console.log(query);
 });
 $(".button2").click(function() {
     $(".card2").hide();
@@ -152,6 +154,7 @@ function updateLocation(response) {
     $(".humidity").text("Humidity: " + Math.round(response.main.humidity) + "%");
     $(".temperature").text("Temperature: " + Math.round(response.main.temp) + "°F");
     $(".title").html(response.name);
+    //document.getElementById("map").src = 
     maps.src = images[response.name];
     console.log(response.name);
 };
